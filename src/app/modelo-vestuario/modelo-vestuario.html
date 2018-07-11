@@ -1,0 +1,49 @@
+<div class="panel panel-profile">
+    <div class="container">
+        <h2 class="heading">Modelo Vestuário</h2>
+        <!-- TABBED CONTENT -->
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab-bottom-left1">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <b>Novo Modelo Vestuário</b>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form #entityForm="ngForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="descricao">Descrição:</label>
+                                    <input [(ngModel)]="entity.descricao" class="form-control" type="text" name="descricao">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="preco">Preço:</label>
+                                    <input [(ngModel)]="entity.preco" class="form-control" type="number" name="preco">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="quantidadeMinima">Qtd mínima:</label>
+                                    <input [(ngModel)]="entity.quantidadeMinima" class="form-control" type="number" name="quantidadeMinima">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="quantidadeMaxima">Qtd máxima:</label>
+                                    <input [(ngModel)]="entity.quantidadeMaxima" class="form-control" type="number" name="quantidadeMaxima">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="quantidadeMaterial">Qtd material:</label>
+                                    <input [(ngModel)]="entity.quantidadeMaterial" class="form-control" type="number" name="quantidadeMaterial">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <input class="btn btn-primary" type="submit" value="Salvar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END RIGHT COLUMN -->
+    </div>
+</div>
