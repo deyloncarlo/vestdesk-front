@@ -167,58 +167,64 @@
 												<tr>
 													<th width="13%">No. Pedido</th>
 													<th>Nome</th>
-													<th>Valor</th>
 													<th>Data Pedido</th>
 													<th>Data Entrega</th>
-													<th width="10%">Status</th>
-													<th width="10%">Detalhes</th>
+													<th>Etapa Atual</th>
+													<th>Etapa Posterior</th>
+													<th width="8%">Status</th>
+													<th width="8%">Detalhes</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td><a href="#">763648</a></td>
 													<td>Puc Barreiro - Direito 2018/2</td>
-													<td>R$ 500</td>
 													<td>03/07/2018</td>
 													<td>03/08/2018</td>
+													<td>Separação</td>
+													<td>Corte</td>
 													<td><span class="label label-success">Entregue</span></td>
-													<td class="text-center"><a type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i></a></td>
+													<td class="text-center"><a type="button" data-toggle="modal" data-target="#modalEtapas"><i class="fa fa-eye"></i></a></td>
 												</tr>
 												<tr>
 													<td><a href="#">763649</a></td>
 													<td>UFMG - Sistemas Informação 2018/1</td>
-													<td>R$ 800</td>
 													<td>03/07/2018</td>
 													<td>03/08/2018</td>
+													<td>Separação</td>
+													<td>Corte</td>
 													<td><span class="label label-warning">Finalizado</span></td>
-													<td class="text-center"><a type="button"><i class="fa fa-eye"></i></a></td>
+													<td class="text-center"><a type="button" data-toggle="modal" data-target="#modalEtapas"><i class="fa fa-eye"></i></a></td>
 												</tr>
 												<tr>
 													<td><a href="#">763650</a></td>
 													<td>Pitágoras - Administração</td>
-													<td>R$ 3400</td>
 													<td>03/07/2018</td>
 													<td>03/08/2018</td>
+													<td>Separação</td>
+													<td>Corte</td>
 													<td><span class="label label-danger">Atrasado</span></td>
-													<td class="text-center"><a type="button"><i class="fa fa-eye"></i></a></td>
+													<td class="text-center"><a type="button" data-toggle="modal" data-target="#modalEtapas"><i class="fa fa-eye"></i></a></td>
 												</tr>
 												<tr>
 													<td><a href="#">763651</a></td>
 													<td>UNA - Enfermagem</td>
-													<td>R$ 900</td>
 													<td>03/07/2018</td>
 													<td>03/08/2018</td>
+													<td>Separação</td>
+													<td>Corte</td>
 													<td><span class="label label-primary">Em produção</span></td>
-													<td class="text-center"><a type="button"><i class="fa fa-eye"></i></a></td>
+													<td class="text-center"><a type="button" data-toggle="modal" data-target="#modalEtapas"><i class="fa fa-eye"></i></a></td>
 												</tr>
 												<tr>
 													<td><a href="#">763652</a></td>
 													<td>UEMG - Design</td>
-													<td>R$ 620</td>
 													<td>03/07/2018</td>
 													<td>03/08/2018</td>
+													<td>Separação</td>
+													<td>Corte</td>
 													<td><span class="label label-success">Entregue</span></td>
-													<td class="text-center"><a type="button"><i class="fa fa-eye"></i></a></td>
+													<td class="text-center"><a type="button" data-toggle="modal" data-target="#modalEtapas"><i class="fa fa-eye"></i></a></td>
 												</tr>
 											</tbody>
 										</table>
@@ -243,34 +249,57 @@
 	<!-- END WRAPPER -->
 
 		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal fade" id="modalEtapas" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-				
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
-					<h4 class="modal-title" id="myModalLabel">Relatório</h4>
-				</div>
-				
-				<div class="modal-body">
-				
-					<table>
-					<tr>
-						<th>Produto</th>
-						<th>Quantidade</th>
-					</tr>
-					<tr>
-						<td>Etc1</td>
-						<td>0</td>
-					</tr>
-					<tr>
-						<td>Etc2</td>
-						<td>0</td>
-					</tr>
-					</table>  
+				<div class="modal-content">				
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+						<h4 class="modal-title" id="myModalLabel">Etapas</h4>
+					</div>
 					
-				</div>
-							
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-6">
+								<label>Tarefa</label>
+							</div>
+							<div class="col-sm-6">
+								<label>Previsão</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<label class="fancy-checkbox">
+									<input type="checkbox">
+									<span>Separação</span>
+								</label>
+							</div>
+							<div class="col-sm-6">
+								09/07/2018
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<label class="fancy-checkbox">
+									<input type="checkbox">
+									<span>Corte</span>
+								</label>
+							</div>
+							<div class="col-sm-6">
+								11/07/2018
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<label class="fancy-checkbox">
+									<input type="checkbox">
+									<span>Bordado</span>
+								</label>
+							</div>
+							<div class="col-sm-6">
+								13/07/2018
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -212,7 +212,7 @@
 													</div>
 													<div class="col-md-2">
 														<label>Layout</label>
-														<button type="button" class="btn btn-primary btn-block">Imagem</button>
+														<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalLayout">Imagem</button>
 													</div>
 												</div>
 												<br />
@@ -453,6 +453,64 @@
 			</div>
 		</footer>
 	</div>
+
+	<div class="modal fade" id="modalImagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">				
+				<div class="modal-body">
+					<center>
+						<img src="assets/img/blusa.png" width="200">					
+					</center>
+				</div>
+			</div>
+		</div>		
+	</div>			
+	
+	<div class="modal fade" id="modalLayout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">				
+				<div class="modal-header">
+					
+					<div class="row">
+						<div class="col-md-7">
+							<div class="form-group">
+								<h4 class="modal-title" id="myModalLabel">Buscar Imagem</h4>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="input-group">
+								<input class="form-control" type="text" placeholder="Buscar">
+								<span class="input-group-btn"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="https://img.elo7.com.br/product/original/17B1547/camisa-sublimacao-poliester.jpg" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://aleatory.vteximg.com.br/arquivos/ids/343735-500-500/camisa-polo-aleatory-masculina-lisa-2018-still-5-.jpg?v=636576593005030000" alt="Cinque Terre" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://img.elo7.com.br/product/original/17B1547/camisa-sublimacao-poliester.jpg" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://aleatory.vteximg.com.br/arquivos/ids/343735-500-500/camisa-polo-aleatory-masculina-lisa-2018-still-5-.jpg?v=636576593005030000" alt="Cinque Terre" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://img.elo7.com.br/product/original/17B1547/camisa-sublimacao-poliester.jpg" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://aleatory.vteximg.com.br/arquivos/ids/343735-500-500/camisa-polo-aleatory-masculina-lisa-2018-still-5-.jpg?v=636576593005030000" alt="Cinque Terre" width="200" height="140">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -466,7 +524,7 @@
 	        var cols = "";
 	        cols += '<td>'+ $('#modeloEscolhido>option:selected').html(); +'</td>';
             cols += '<td>R$ '+ $('#precoModelo').val(); +'</td>';
-            cols += '<td><img src="assets/img/blusa.png" alt="Avatar" class="avatar img-circle"> <a href="#">Nome</a> </td>';
+            cols += '<td><img src="assets/img/blusa.png" alt="Avatar" class="avatar img-circle" data-toggle="modal" data-target="#modalImagem"></td>';
             cols += '<td>'+ $('#quantidadeModelo').val(); +'</td></tr>';
             newRow.append(cols);
             $("#tabelaModelos").append(newRow); 
@@ -476,23 +534,27 @@
 	    $("#btnInserirIndividual").click(function(){
 	    	var newRow = $("<tr>");
 	        var cols = "";
-            cols += '<td>'+ $('#responsavelIndividual').val(); +'</td>';
-            cols += '<td>'+ $('#camisaIndividual').val(); +'</td>';
-            cols += '<td>'+ $('#telefoneIdividual').val(); +'</td>';
-            cols += '<td>'+ $('#cursoIndividual').val(); +'</td>';
+            cols += '<td>'+ $('#responsavelIndividual').val() +'</td>';
+            cols += '<td>'+ $('#camisaIndividual').val() +'</td>';
+            cols += '<td>'+ $('#telefoneIdividual').val() +'</td>';
+            cols += '<td>'+ $('#cursoIndividual').val() +'</td>';
+            var modelo = 
+			cols += '<td>'+ $('#modeloIndividual>option:selected').html() + ' / ' + $('#corIndividual').val() +'</td>';
+            cols += '<td>'+ $('#tamanhoIndividual').val() + ' / ' + $('#quantidadeIndividual').val() +'</td>';
 
-			var modelo = "<ul>";
-			modelo += "<li>"+ $('#modeloIndividual>option:selected').html(); +"</li>";
-			modelo += "<li>"+ $('#corIndividual').val(); +"</li>";
-			modelo += "</ul>";
-			cols += '<td>'+modelo+'</td>';
+			// var modelo = "<ul>";
+			// modelo += "<li>"+ $('#modeloIndividual>option:selected').html(); +"</li>";
+			// modelo += "<li>"+ $('#corIndividual').val(); +"</li>";
+			// modelo += "</ul>";
+			// cols += '<td>'+modelo+'</td>';
 
-			var detalhes = "<ul>";
-			detalhes += "<li>"+ $('#tamanhoIndividual').val(); +"</li>";
-			detalhes += "<li>"+ $('#quantidadeIndividual').val(); +"</li>";
-			detalhes += "</ul>";
-			cols += '<td>'+detalhes+'</td>'
+			// var detalhes = "<ul>";
+			// detalhes += "<li>"+ $('#tamanhoIndividual').val(); +"</li>";
+			// detalhes += "<li>"+ $('#quantidadeIndividual').val(); +"</li>";
+			// detalhes += "</ul>";
+			// cols += '<td>'+detalhes+'</td>'
             
+			cols += '</tr>'
 			newRow.append(cols);
             $("#tabelaIndividual").append(newRow); 
 
