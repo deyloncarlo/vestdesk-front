@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Profile | Klorofil - Free Bootstrap Dashboard Template</title>
+	<title>Vest</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -27,7 +27,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.html"><img src="assets/img/logo.png" width="100px" alt="Vest desk Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -68,7 +68,7 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Erick</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
@@ -89,24 +89,21 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+						<li><a href="#" class=""><i class="lnr lnr-home"></i> <span>Início</span></a></li>
+						<li><a href="pedidos.html" class=""><i class="lnr lnr-code"></i> <span>Pedidos</span></a></li>
+						<li><a href="producao.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Producao</span></a></li>
+						<li><a href="venda.html" class=""><i class="lnr lnr-cog"></i> <span>Venda</span></a></li>
+						<li><a href="concluir.html" class=""><i class="lnr lnr-alarm"></i> <span>Concluir</span></a></li>
 						<li>
-							<a href="#subPages" data-toggle="collapse" class="active"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#subPages" data-toggle="collapse" class="active"><i class="lnr lnr-file-empty"></i> <span>Estoque</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse in">
 								<ul class="nav">
-									<li><a href="page-profile.html" class="active">Profile</a></li>
-									<li><a href="page-login.html" class="">Login</a></li>
-									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+									<li><a href="#" class="active">Produtos</a></li>
+									<li><a href="#" class="">Material</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+						<li><a href="cliente.html" class=""><i class="lnr lnr-dice"></i> <span>Cliente</span></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -126,7 +123,7 @@
 								<div class="custom-tabs-line tabs-line-bottom left-aligned">
 									<ul class="nav" role="tablist">
 										<li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">Informações</a></li>
-										<li><a role="tab" data-toggle="tab">Produtos</a></li>
+										<li><a role="tab" href="#tab-bottom-left2" data-toggle="tab">Produtos</a></li>
 									</ul>
 								</div>
 								<div class="tab-content">
@@ -166,15 +163,18 @@
 												<br />
 												<div class="row">
 													<div class="col-md-8">
+														<label>Nome</label>
 														<div class="input-group">
 															<input class="form-control" type="text" placeholder="Cliente">
 															<span class="input-group-btn"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></span>
 														</div>
 													</div>
 													<div class="col-md-2">
+														<label>Cadastrar</label>
 														<button type="button" class="btn btn-primary btn-block">Novo Cliente</button>
 													</div>
 													<div class="col-md-2">
+														<label>Tipo</label>
 														<select class="form-control">
 															<option value="0" >Produção</option>
 															<option value="1" >Venda</option>
@@ -212,7 +212,7 @@
 													</div>
 													<div class="col-md-2">
 														<label>Layout</label>
-														<button type="button" class="btn btn-primary btn-block">Imagem</button>
+														<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalLayout">Imagem</button>
 													</div>
 												</div>
 												<br />
@@ -220,11 +220,11 @@
 													<div class="col-md-3">
 														<label>Frente</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="fSil" type="radio">
+															<input name="tipoFrente" value="fSil" type="radio">
 															<span><i></i>Silcado</span>
 														</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="fBor" type="radio">
+															<input name="tipoFrente" value="fBor" type="radio">
 															<span><i></i>Bordado</span>
 														</label>
 														<input class="form-control" type="text">
@@ -232,11 +232,11 @@
 													<div class="col-md-3">
 														<label>Costa</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="cSil" type="radio">
+															<input name="tipoCosta" value="cSil" type="radio">
 															<span><i></i>Silcado</span>
 														</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="cBor" type="radio">
+															<input name="tipoCosta" value="cBor" type="radio">
 															<span><i></i>Bordado</span>
 														</label>
 														<input class="form-control" type="text">
@@ -244,11 +244,11 @@
 													<div class="col-md-3">
 														<label>Manga Direita</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="dSil" type="radio">
+															<input name="tipoMd" value="dSil" type="radio">
 															<span><i></i>Silcado</span>
 														</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="dBor" type="radio">
+															<input name="tipoMd" value="dBor" type="radio">
 															<span><i></i>Bordado</span>
 														</label>
 														<input class="form-control" type="text">
@@ -256,27 +256,33 @@
 													<div class="col-md-3">
 														<label>Manga Esquerda</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="eSil" type="radio">
+															<input name="tipoMe" value="eSil" type="radio">
 															<span><i></i>Silcado</span>
 														</label>
 														<label class="fancy-radio">
-															<input name="tipo" value="eBor" type="radio">
+															<input name="tipoMe" value="eBor" type="radio">
 															<span><i></i>Bordado</span>
 														</label>
 														<input class="form-control" type="text">
 													</div>
 												</div>
-												<br/>
+												<br />
 												<div class="row">
 													<div class="col-md-2">
 														<button class="btn btn-primary btn-block" id="btnInserir">Inserir Modelo</button>
 													</div>
 												</div>
-												<br /><br /><br />
+											</div>
+										</div>
+										<div class="panel">
+											<div class="panel-heading">
+												<h3 class="panel-title"><b>Tabela Modelos</b></h3>
+											</div>
+											<div class="panel-body">
 												<div class="row">
 													<div class="panel-body">
 														<div class="table-responsive">
-															<table class="table project-table" id="tabelaModelos">
+															<table class="table table-striped project-table" id="tabelaModelos">
 																<thead>
 																	<tr>
 																		<th width="50%">Modelo</th>
@@ -293,94 +299,140 @@
 												</div>
 											</div>
 										</div>
-										<div class="margin-top-30 text-center"><a class="btn btn-primary" href="#tab-bottom-left2"		 data-toggle="tab" id="btnAvancar">Avançar</a></div>
 									</div>
+										<!-- <div class="margin-top-30 text-center"><a class="btn btn-primary" href="#tab-bottom-left2" data-toggle="tab" id="btnAvancar">Avançar</a></div> -->
 									<div class="tab-pane fade" id="tab-bottom-left2">
-										<div class="table-responsive">
-											<table class="table project-table">
-												<thead>
-													<tr>
-														<th>Title</th>
-														<th>Progress</th>
-														<th>Leader</th>
-														<th>Status</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td><a href="#">Spot Media</a></td>
-														<td>
-															<div class="progress">
-																<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-																	<span>60% Complete</span>
-																</div>
-															</div>
-														</td>
-														<td><img src="assets/img/user2.png" alt="Avatar" class="avatar img-circle"> <a href="#">Michael</a></td>
-														<td><span class="label label-success">ACTIVE</span></td>
-													</tr>
-													<tr>
-														<td><a href="#">E-Commerce Site</a></td>
-														<td>
-															<div class="progress">
-																<div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
-																	<span>33% Complete</span>
-																</div>
-															</div>
-														</td>
-														<td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle"> <a href="#">Antonius</a></td>
-														<td><span class="label label-warning">PENDING</span></td>
-													</tr>
-													<tr>
-														<td><a href="#">Project 123GO</a></td>
-														<td>
-															<div class="progress">
-																<div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;">
-																	<span>68% Complete</span>
-																</div>
-															</div>
-														</td>
-														<td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle"> <a href="#">Antonius</a></td>
-														<td><span class="label label-success">ACTIVE</span></td>
-													</tr>
-													<tr>
-														<td><a href="#">Wordpress Theme</a></td>
-														<td>
-															<div class="progress">
-																<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-																	<span>75%</span>
-																</div>
-															</div>
-														</td>
-														<td><img src="assets/img/user2.png" alt="Avatar" class="avatar img-circle"> <a href="#">Michael</a></td>
-														<td><span class="label label-success">ACTIVE</span></td>
-													</tr>
-													<tr>
-														<td><a href="#">Project 123GO</a></td>
-														<td>
-															<div class="progress">
-																<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-																	<span>100%</span>
-																</div>
-															</div>
-														</td>
-														<td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Antonius</a></td>
-														<td><span class="label label-default">CLOSED</span></td>
-													</tr>
-													<tr>
-														<td><a href="#">Redesign Landing Page</a></td>
-														<td>
-															<div class="progress">
-																<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-																	<span>100%</span>
-																</div>
-															</div>
-														</td>
-														<td><img src="assets/img/user5.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Jason</a></td>
-														<td><span class="label label-default">CLOSED</span></td>
-													</tr>
-												</tbody>
-											</table>
+										<div class="panel">
+											<div class="panel-heading">
+												<h3 class="panel-title"><b>Padrão</b></h3>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Curso</label>
+															<input class="form-control" type="text" id="cursoPadrao">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Modelo</label>
+															<select class="form-control" id="modeloPadrao">
+																<option></option>
+																<option value="1" >Moletom</option>
+																<option value="2" >Polo</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Cor</label>
+															<input class="form-control" type="text" id="corPadrao">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Quantidade</label>
+															<input class="form-control" type="number" maxlength="6" id="quantidadePadrao">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel">
+											<div class="panel-heading">
+												<h3 class="panel-title"><b>Individual</b></h3>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-5">
+														<div class="form-group">
+															<label>Nome Responsável</label>
+															<input class="form-control" type="text" id="responsavelIndividual" placeholder="Cliente">
+														</div>
+													</div>
+													<div class="col-md-5">
+														<div class="form-group">
+															<label>Nome Camisa</label>
+															<input class="form-control" id="camisaIndividual" type="text">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Telefone</label>
+															<input class="form-control" id="telefoneIdividual" type="text" maxlength="11" >
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Curso</label>
+															<input class="form-control" type="text" id="cursoIndividual">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label>Modelo</label>
+															<select class="form-control" id="modeloIndividual">
+																<option></option>
+																<option value="1" >Moletom</option>
+																<option value="2" >Polo</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Tamanho</label>
+															<input class="form-control" type="text" id="tamanhoIndividual" maxlength="2">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Cor</label>
+															<input class="form-control" type="text" id="corIndividual">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label>Quantidade</label>
+															<input class="form-control" type="number" maxlength="6" id="quantidadeIndividual">
+														</div>
+													</div>
+													
+												</div>
+												<div class="row">
+												<div class="col-md-2">
+														<button class="btn btn-default btn-block" id="btnInserirAdiantamento">Adiantamento</button>
+													</div>
+													<div class="col-md-2">
+														<button class="btn btn-primary btn-block" id="btnInserirIndividual">Inserir</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel">
+											<div class="panel-heading">
+												<h3 class="panel-title"><b> Tabela Individual</b></h3>
+											</div>
+											<div class="panel-body">
+												<div class="table-responsive">
+													<table class="table table-striped project-table" id="tabelaIndividual">
+														<thead>
+															<tr>
+																<th>Nome</th>
+																<th>Camisa</th>
+																<th>Telefone</th>
+																<th>Curso</th>
+																<th>Modelo</th>
+																<th>Detalhes</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -401,6 +453,64 @@
 			</div>
 		</footer>
 	</div>
+
+	<div class="modal fade" id="modalImagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">				
+				<div class="modal-body">
+					<center>
+						<img src="assets/img/blusa.png" width="200">					
+					</center>
+				</div>
+			</div>
+		</div>		
+	</div>			
+	
+	<div class="modal fade" id="modalLayout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">				
+				<div class="modal-header">
+					
+					<div class="row">
+						<div class="col-md-7">
+							<div class="form-group">
+								<h4 class="modal-title" id="myModalLabel">Buscar Imagem</h4>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="input-group">
+								<input class="form-control" type="text" placeholder="Buscar">
+								<span class="input-group-btn"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="https://img.elo7.com.br/product/original/17B1547/camisa-sublimacao-poliester.jpg" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://aleatory.vteximg.com.br/arquivos/ids/343735-500-500/camisa-polo-aleatory-masculina-lisa-2018-still-5-.jpg?v=636576593005030000" alt="Cinque Terre" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://img.elo7.com.br/product/original/17B1547/camisa-sublimacao-poliester.jpg" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://aleatory.vteximg.com.br/arquivos/ids/343735-500-500/camisa-polo-aleatory-masculina-lisa-2018-still-5-.jpg?v=636576593005030000" alt="Cinque Terre" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://img.elo7.com.br/product/original/17B1547/camisa-sublimacao-poliester.jpg" width="200" height="140">
+						</div>
+						<div class="col-sm-4">
+							<img src="https://aleatory.vteximg.com.br/arquivos/ids/343735-500-500/camisa-polo-aleatory-masculina-lisa-2018-still-5-.jpg?v=636576593005030000" alt="Cinque Terre" width="200" height="140">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -414,10 +524,39 @@
 	        var cols = "";
 	        cols += '<td>'+ $('#modeloEscolhido>option:selected').html(); +'</td>';
             cols += '<td>R$ '+ $('#precoModelo').val(); +'</td>';
-            cols += '<td><img src="assets/img/blusa.png" alt="Avatar" class="avatar img-circle"> <a href="#">Nome</a> </td>';
+            cols += '<td><img src="assets/img/blusa.png" alt="Avatar" class="avatar img-circle" data-toggle="modal" data-target="#modalImagem"></td>';
             cols += '<td>'+ $('#quantidadeModelo').val(); +'</td></tr>';
             newRow.append(cols);
             $("#tabelaModelos").append(newRow); 
+
+	    });
+
+	    $("#btnInserirIndividual").click(function(){
+	    	var newRow = $("<tr>");
+	        var cols = "";
+            cols += '<td>'+ $('#responsavelIndividual').val() +'</td>';
+            cols += '<td>'+ $('#camisaIndividual').val() +'</td>';
+            cols += '<td>'+ $('#telefoneIdividual').val() +'</td>';
+            cols += '<td>'+ $('#cursoIndividual').val() +'</td>';
+            var modelo = 
+			cols += '<td>'+ $('#modeloIndividual>option:selected').html() + ' / ' + $('#corIndividual').val() +'</td>';
+            cols += '<td>'+ $('#tamanhoIndividual').val() + ' / ' + $('#quantidadeIndividual').val() +'</td>';
+
+			// var modelo = "<ul>";
+			// modelo += "<li>"+ $('#modeloIndividual>option:selected').html(); +"</li>";
+			// modelo += "<li>"+ $('#corIndividual').val(); +"</li>";
+			// modelo += "</ul>";
+			// cols += '<td>'+modelo+'</td>';
+
+			// var detalhes = "<ul>";
+			// detalhes += "<li>"+ $('#tamanhoIndividual').val(); +"</li>";
+			// detalhes += "<li>"+ $('#quantidadeIndividual').val(); +"</li>";
+			// detalhes += "</ul>";
+			// cols += '<td>'+detalhes+'</td>'
+            
+			cols += '</tr>'
+			newRow.append(cols);
+            $("#tabelaIndividual").append(newRow); 
 
 	    });
 
@@ -426,6 +565,40 @@
 	    	 $("tab1").removeClass("active");
 	    });
 
+		$("#cursoPadrao").keydown(function(){
+			var texto = $("#cursoPadrao").val();
+			$("#cursoIndividual:text").val(texto);
+			if(texto.length > 0)
+				$("#cursoIndividual").prop('disabled', true);
+			else
+				$("#cursoIndividual").prop('disabled', false);
+		});
+
+		$('#modeloPadrao').on('change', function() {
+			$('#modeloIndividual').val(this.val);
+			if( this.value != 0)
+				$("#modeloIndividual").prop('disabled', true);
+			else
+				$("#modeloIndividual").prop('disabled', false);
+		})
+
+		$("#corPadrao").keydown(function(){
+			var texto = $("#corPadrao").val();
+			$("#corIndividual:text").val(texto);
+			if(texto.length > 0)
+				$("#corIndividual").prop('disabled', true);
+			else
+				$("#corIndividual").prop('disabled', false);
+		});
+		
+		$("#quantidadePadrao").keydown(function(){
+			var texto = $("#quantidadePadrao").val();
+			$("#quantidadeIndividual").val(texto);
+			if(texto.length > 0)
+				$("#quantidadeIndividual").prop('disabled', true);
+			else
+				$("#quantidadeIndividual").prop('disabled', false);
+		});
 	});
 	</script>
 </body>
