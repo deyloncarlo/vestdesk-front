@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { AgGridModule } from "ag-grid-angular";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppRoutingModule, routingComponents } from "./app-routing.module";
 import { AppComponent } from './app.component';
@@ -17,7 +18,8 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

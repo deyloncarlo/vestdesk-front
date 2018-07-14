@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModeloVestuario } from "../modelo-vestuario";
+import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-modelo-vestuario',
@@ -8,17 +9,29 @@ import { ModeloVestuario } from "../modelo-vestuario";
 })
 export class ModeloVestuarioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   public entity: ModeloVestuario;
   public columnDefs: Array<Object> = new Array();
   public rowData: Array<Object> = new Array();
+  private gridApi;
 
   ngOnInit() {
-    this.entity = new ModeloVestuario ("Modelo 1", 10, 20, 23, 11);
-    this.columnDefs.push({headerName: 'Descricao', field: 'descricao'});
-    this.columnDefs.push({headerName: 'Preco', field: 'preco'});
-    this.rowData.push({descricao: 'Teste', preco: 20});
+    this.entity = new ModeloVestuario();
+    this.columnDefs.push({ headerName: 'Descricao', field: 'descricao' });
+    this.columnDefs.push({ headerName: 'Preco', field: 'preco' });
+    this.rowData.push({ descricao: 'Teste', preco: 20 });
   }
 
+  onGridReady(p_params) {
+    this.gridApi = p_params.api;
+    this.gridApi.sizeColumnsToFit();
+  }
+
+  novo(p_content) {
+    this.modalService.open(p_content, { size: 'lg' }).result.then((result) => {
+      let v_novo = Object.assign({}, result)
+      this.gridApi.updateRowData({ add: [v_novo] });
+    });
+  }
 }
