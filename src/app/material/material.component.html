@@ -9,8 +9,8 @@
             <form #entityForm="ngForm">
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="descricao">Descrição:</label>
-                        <input [(ngModel)]="entity.descricao" class="form-control" type="text" name="descricao">
+                        <label for="nome">Nome:</label>
+                        <input [(ngModel)]="entity.nome" class="form-control" type="text" name="nome">
                     </div>
                     <div class="col-md-6">
                         <label for="preco">Preço:</label>
@@ -23,10 +23,6 @@
                     <div class="col-md-6">
                         <label for="quantidadeMaxima">Qtd máxima:</label>
                         <input [(ngModel)]="entity.quantidadeMaxima" class="form-control" type="number" name="quantidadeMaxima">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="quantidadeMaterial">Qtd material:</label>
-                        <input [(ngModel)]="entity.quantidadeMaterial" class="form-control" type="number" name="quantidadeMaterial">
                     </div>
                 </div>
             </form>
@@ -41,10 +37,12 @@
 
 <div class="panel panel-profile">
     <div class="container">
-        <h2 class="heading">Modelo Vestuário</h2>
+        <h2 class="heading">Material</h2>
         <div class="panel">
             <div class="panel-heading">
-                <app-filter-form [editFields]="columnDefs"></app-filter-form>
+                <div class="text-center">
+                    <a class="btn btn-primary" (click)="novo(content)">Novo</a>
+                </div>
             </div>
             <div class="panel-body">
                 <ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs"

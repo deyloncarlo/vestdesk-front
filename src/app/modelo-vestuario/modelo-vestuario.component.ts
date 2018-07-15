@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ModeloVestuario } from "../modelo-vestuario";
+import { ModeloVestuario } from "../entidades/modelo-vestuario";
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
+import { FilterFormComponent } from "../filter-form/filter-form.component";
 
 @Component({
   selector: 'app-modelo-vestuario',
