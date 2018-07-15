@@ -1,0 +1,77 @@
+Pedido
+==============
+Colocar opçao de vazio (ciucado, bordado, ...)
+
+Campo obrigatório:
+> Preço de venda
+
+No grid 
+--------------
+Modelo
+Cor
+Tamanho
+Observação
+
+Na hora de cadastrar o modelo do produto
+---------------------
+Preencher a quantidade (quantidade de blusas/moletons) de peças do pedido depois que for cadastradas todas as peças.
+
+Deve ser possível mudar o prazo estimado para entrega do pedido. Permitir editar os 30 dias (Botão Urgente: Pode alterar a data)
+
+No código do pedido, contenar as iniciais do vendedor com o código. 
+
+Ordem de Produção
+==============
+Status:
+Em produção = Em dia (Cor: Verde)
+Finalizado = Pronto (Cor: Azul)
+Atrasado  (Cor: Amarelo)
+Entregue (Aparecer no relatório) -> Tem que sumir da lista de Ordem de Produção
+Urgente (Cor: Vermelho)
+
+Tem que ter a opção de ver os dados do pedido! Criar o Cupom
+
+(Ou é Separação [tira do estoque de produtos] ou é Corte[tira do estoque de materias])
+
+Venda
+==============
+Tem que ter o status (Urgente ou Normal). Se for Urgente preencher a data diferente, se for Normal deixa os 30 dias mesmo
+
+
+Criar tela de Relatório de Pedidos:
+==========================
+Irá mostrar todos os pedidos com seus Status.
+Deve ser possível filtrar pelo código do pedido.
+
+
+
+Perfis:
+===========
+Vendedor
+---------
+Tela de criar Pedido (Só pode ver a sua venda)
+Relatório de Pedido (Só pode ver o pedido dele)
+Tela de finalizar venda
+
+Admin
+---------
+Faz tudo
+
+Produção
+---------
+Ordem de Produção
+Relatório de Pedidos
+
+
+Estoque:
+=============
+Relatorio de Vendas por Período
+
+Notificação
+================
+Admin -> Recebe todas
+Finalização de pedido
+Ordem de produção atrasada
+Cadastro de pedido urgente
+Estoque baixo
+Acabou produto no estoque

@@ -20,7 +20,11 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@ng-bootstrap/ng-bootstrap": "^2.2.0",
+    "ag-grid": "^18.1.1",
+    "ag-grid-angular": "^18.1.0",
     "core-js": "^2.5.4",
+    "mime-types": "^2.1.18",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
