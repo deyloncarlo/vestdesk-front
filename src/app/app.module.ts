@@ -5,12 +5,14 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule, routingComponents } from "./app-routing.module";
 import { AppComponent } from './app.component';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
+import { FormaPagamentoComponent } from './forma-pagamento/forma-pagamento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    MenuLateralComponent
+    MenuLateralComponent,
+    FormaPagamentoComponent
   ],
   imports: [
     BrowserModule,
