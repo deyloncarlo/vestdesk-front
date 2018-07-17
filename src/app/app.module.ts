@@ -11,6 +11,7 @@ import { MaterialComponent } from './material/material.component';
 import { FilterFormDirective } from './diretivas/filter-form.directive';
 import { FilterFormComponent } from './filter-form/filter-form.component';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { FormaPagamentoComponent } from './forma-pagamento/forma-pagamento.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     MaterialComponent,
     FilterFormDirective,
     FilterFormComponent,
-    EditFormComponent
+    EditFormComponent,
+    FormaPagamentoComponent
   ],
   imports: [
     BrowserModule,
